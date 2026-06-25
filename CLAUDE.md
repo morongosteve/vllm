@@ -13,10 +13,10 @@ vLLM is a high-throughput LLM inference and serving library. Originally from UC 
 ## Development Commands
 
 ```bash
-# Install from source (CPU-only, no CUDA extensions)
-pip install -e . --no-build-isolation
+# Install from source targeting CPU (no CUDA extensions)
+VLLM_TARGET_DEVICE=cpu pip install -e . --no-build-isolation
 
-# Install with CUDA extensions (requires CUDA toolkit)
+# Install with CUDA extensions (requires CUDA toolkit; default on GPU boxes)
 pip install -e . --no-build-isolation -v
 
 # Run tests (requires GPU unless using CPU-only fixtures)
